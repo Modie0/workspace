@@ -115,15 +115,14 @@ p.body-text{color:var(--text); margin:0; max-width:600px;}
 .still-row{
   display:grid;
   grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:6px;
+  gap:8px;
   min-width:0;
 }
 .still-btn{
   border:1px solid var(--border);
-  background:var(--hover);
+  background:#F3F1ED;
   padding:0;
-  border-radius:5px;
-  overflow:hidden;
+  border-radius:6px;
   cursor:zoom-in;
   display:block;
   width:100%;
@@ -134,9 +133,15 @@ p.body-text{color:var(--text); margin:0; max-width:600px;}
 }
 .still-btn img{
   width:100%;
-  height:96px;
+  height:auto;
+  aspect-ratio:4 / 3;
+  object-fit:contain;
+  object-position:center;
   display:block;
-  object-fit:cover;
+  border-radius:6px;
+  background:#F3F1ED;
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
 }
 
 .other-list{display:flex; flex-direction:column; gap:14px;}
@@ -173,7 +178,7 @@ footer{margin-top:72px; padding-top:28px; border-top:1px solid var(--border);}
   .prop-row{flex-direction:column; gap:2px; padding:10px 0;}
   .prop-key{width:auto; font-size:13px;}
   .section{margin-top:64px;}
-  .still-btn img{height:72px;}
+  .still-btn img{aspect-ratio:4 / 3;}
   .project-video.portrait{max-width:min(200px, 70vw);}
 }
 </style>
@@ -279,13 +284,13 @@ footer{margin-top:72px; padding-top:28px; border-top:1px solid var(--border);}
         </video>
         <div class="still-row">
           <a class="still-btn" href="media/ads/nouri-brand-board.jpg" data-full="media/ads/nouri-brand-board.jpg" data-alt="Nouri Capsul pistachio brand board">
-            <img src="media/ads/nouri-brand-board.jpg" alt="Nouri Capsul pistachio brand board" width="1024" height="768" decoding="async">
+            <img src="media/ads/nouri-brand-board.jpg" alt="Nouri Capsul pistachio brand board" width="1024" height="768" decoding="sync" loading="eager">
           </a>
           <a class="still-btn" href="media/ads/nouri-campaign.jpg" data-full="media/ads/nouri-campaign.jpg" data-alt="Nouri Capsul campaign visual, Made in Lebanon">
-            <img src="media/ads/nouri-campaign.jpg" alt="Nouri Capsul campaign visual, Made in Lebanon" width="768" height="1024" decoding="async">
+            <img src="media/ads/nouri-campaign.jpg" alt="Nouri Capsul campaign visual, Made in Lebanon" width="768" height="1024" decoding="sync" loading="eager">
           </a>
           <a class="still-btn" href="media/ads/nouri-mockups.jpg" data-full="media/ads/nouri-mockups.jpg" data-alt="Nouri Capsul billboard and product mockups">
-            <img src="media/ads/nouri-mockups.jpg" alt="Nouri Capsul billboard and product mockups" width="1024" height="682" decoding="async">
+            <img src="media/ads/nouri-mockups.jpg" alt="Nouri Capsul billboard and product mockups" width="1024" height="682" decoding="sync" loading="eager">
           </a>
         </div>
       </div>
