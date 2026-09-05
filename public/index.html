@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Mohamed Kiwan — builder shipping AI products and client automation for SMEs.">
+<title>Mohamed Kiwan — Builder</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="media/ads/nouri-brand-board.jpg">
+<link rel="preload" as="image" href="media/ads/nouri-campaign.jpg">
+<link rel="preload" as="image" href="media/ads/nouri-mockups.jpg">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --text:#1F1F1F;
+  --muted:#5C5A57;
+  --faint:#8A8884;
+  --border:#EBEAE8;
+  --hover:#F7F6F4;
+  --chip-bg:#D8D4CC;
+  --chip-text:#1A1918;
+  --chip-border:#A8A49C;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Inter, Arial, sans-serif;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{overflow-x:hidden; color-scheme:light;}
+body{
+  background:var(--bg) !important;
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  width:100%;
+  color-scheme:light;
+}
+.page{max-width:720px; margin:0 auto; padding:clamp(48px,10vw,96px) clamp(20px,5vw,24px) clamp(56px,8vw,80px);}
+
+.icon{font-size:clamp(34px,8vw,44px); margin-bottom:16px; line-height:1;}
+h1{
+  font-size:clamp(28px,7vw,38px); font-weight:700; letter-spacing:-0.02em; margin-bottom:10px;
+}
+.tagline{color:var(--muted); font-size:clamp(15px,4vw,17px); max-width:560px; margin-bottom:28px;}
+
+.props{margin-bottom:8px;}
+.prop-row{
+  display:flex; gap:16px; font-size:14px; padding:7px 0;
+  align-items:flex-start;
+}
+.prop-key{
+  width:88px; flex-shrink:0; color:var(--muted); font-weight:500;
+}
+.prop-val{color:var(--text); min-width:0;}
+.prop-val a{color:var(--text); border-bottom:1px solid var(--text);}
+.prop-val a:hover{color:var(--muted); border-color:var(--muted);}
+.status-row{display:flex; flex-wrap:wrap; gap:10px 18px; align-items:baseline;}
+.cv-link{
+  color:var(--text); font-weight:600; border-bottom:1px solid var(--text);
+  white-space:nowrap;
+}
+.cv-link:hover{color:var(--muted); border-color:var(--muted);}
+
+p.body-text{color:var(--text); margin:0; max-width:600px;}
+
+.section{margin-top:88px;}
+.section-title{
+  font-size:13px; font-weight:600; color:var(--muted);
+  text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px;
+}
+.section-intro{
+  color:var(--muted); font-size:14.5px; max-width:600px; margin:0 0 28px;
+}
+.section-intro a{color:var(--text); border-bottom:1px solid var(--text);}
+.section-intro a:hover{color:var(--muted); border-color:var(--muted);}
+
+.client-list{display:flex; flex-direction:column; gap:22px;}
+.client-card h3{font-size:16px; font-weight:600; margin-bottom:6px;}
+.client-card p{color:var(--text); font-size:14.5px; max-width:600px;}
+
+.project{padding:28px 0; border-top:1px solid var(--border);}
+.project:first-child{padding-top:4px; border-top:none;}
+.project-title{
+  font-size:18px; font-weight:600; margin-bottom:14px;
+}
+.project-title a{color:var(--text); text-decoration:none;}
+.project-title a:hover{border-bottom:1px solid var(--text);}
+.project p{color:var(--text); font-size:14.5px; max-width:600px; margin-bottom:12px;}
+
+.chip-row{display:flex; flex-wrap:wrap; gap:6px;}
+.chip{
+  font-size:12px; color:var(--chip-text); background:var(--chip-bg);
+  border:1px solid var(--chip-border); padding:4px 9px; border-radius:3px;
+}
+
+.media-block{margin:0 0 14px; min-width:0;}
+.media-split{display:grid; gap:10px; min-width:0;}
+.project-video{
+  width:100%;
+  max-width:100%;
+  max-height:420px;
+  height:auto;
+  display:block;
+  border-radius:6px;
+  background:#111;
+}
+.project-video.portrait{
+  width:auto;
+  max-width:min(220px, 100%);
+  max-height:420px;
+  margin:0;
+}
+
+.still-row{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:6px;
+  min-width:0;
+}
+.still-btn{
+  border:1px solid var(--border);
+  background:var(--hover);
+  padding:0;
+  border-radius:5px;
+  overflow:hidden;
+  cursor:zoom-in;
+  display:block;
+  width:100%;
+  min-width:0;
+  line-height:0;
+  text-decoration:none;
+  color:inherit;
+}
+.still-btn img{
+  width:100%;
+  height:96px;
+  display:block;
+  object-fit:cover;
+}
+
+.other-list{display:flex; flex-direction:column; gap:14px;}
+.other-item{font-size:14.5px;}
+.other-item a{color:var(--text); font-weight:600; border-bottom:1px solid var(--text);}
+.other-item a:hover{color:var(--muted); border-color:var(--muted);}
+.other-item span{color:var(--muted);}
+
+.lightbox{
+  position:fixed; inset:0; z-index:50;
+  background:rgba(20,18,15,.72);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  cursor:zoom-out;
+}
+.lightbox.open{display:flex;}
+.lightbox img{
+  max-width:min(960px, 100%);
+  max-height:90vh;
+  width:auto;
+  height:auto;
+  border-radius:8px;
+  box-shadow:0 12px 40px rgba(0,0,0,.35);
+}
+
+footer{margin-top:72px; padding-top:28px; border-top:1px solid var(--border);}
+.footer-links{display:flex; gap:18px; flex-wrap:wrap; font-size:14px;}
+.footer-links a{color:var(--muted); border-bottom:1px solid transparent; padding:4px 0;}
+.footer-links a:hover{color:var(--text); border-color:var(--text);}
+
+@media (max-width:600px){
+  .prop-row{flex-direction:column; gap:2px; padding:10px 0;}
+  .prop-key{width:auto; font-size:13px;}
+  .section{margin-top:64px;}
+  .still-btn img{height:72px;}
+  .project-video.portrait{max-width:min(200px, 70vw);}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="icon" aria-hidden="true">🧭</div>
+  <h1>Mohamed Kiwan</h1>
+  <p class="tagline">Builder shipping AI products end to end — from first cold call to deployed tool.</p>
+
+  <div class="props">
+    <div class="prop-row">
+      <div class="prop-key">Base</div>
+      <div class="prop-val">Beirut / Barcelona</div>
+    </div>
+    <div class="prop-row">
+      <div class="prop-key">Focus</div>
+      <div class="prop-val">AI products, automation, business development</div>
+    </div>
+    <div class="prop-row">
+      <div class="prop-key">Method</div>
+      <div class="prop-val">Ship fast with AI tooling, from scoping to deployment.</div>
+    </div>
+    <div class="prop-row">
+      <div class="prop-key">Status</div>
+      <div class="prop-val">
+        <div class="status-row">
+          <span>Available for business development and AI implementation roles</span>
+          <a class="cv-link" href="cv.pdf" download="Mohamed-Kiwan-CV.pdf">Download CV →</a>
+        </div>
+      </div>
+    </div>
+    <div class="prop-row">
+      <div class="prop-key">Email</div>
+      <div class="prop-val"><a href="mailto:mkiwann@outlook.com">mkiwann@outlook.com</a></div>
+    </div>
+  </div>
+
+  <p class="body-text" style="margin-top:36px;">International Business graduate (First Class Honours), raised across Kuwait, Lebanon and Spain. Co-founded an AI automation agency in Barcelona, ran its commercial function, and delivered the client work — automation tools, custom internal systems and websites for SMEs across Europe.</p>
+
+  <section class="section" aria-labelledby="client-work">
+    <h2 class="section-title" id="client-work">Client Work</h2>
+    <p class="section-intro">Co-founded <a href="https://nexlifa.com" target="_blank" rel="noopener">NexLifa</a>, an AI automation agency in Barcelona serving SMEs across Europe. Ran the commercial function and delivered the builds. Check the showcases on the site to see some of my work from NexLifa.</p>
+    <div class="client-list">
+      <article class="client-card">
+        <h3>Document extraction and matching tool</h3>
+        <p>Automated invoice and document matching for an energy company. Cut a three-hour daily process to about a minute. Saved roughly 89 hours a month.</p>
+      </article>
+      <article class="client-card">
+        <h3>Car auction analyser</h3>
+        <p>Automated vehicle listing analysis. Reduced per-car review from 10 minutes to 15 seconds.</p>
+      </article>
+      <article class="client-card">
+        <h3>Invoice generator</h3>
+        <p>Automated invoice creation, down from 7 minutes to 1.</p>
+      </article>
+      <article class="client-card">
+        <h3>Client websites</h3>
+        <p>Designed, built and shipped with SEO setup on one to three day turnarounds.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="projects">
+    <h2 class="section-title" id="projects">Projects</h2>
+
+    <article class="project">
+      <h3 class="project-title"><a href="https://mazad-lb.vercel.app" target="_blank" rel="noopener">Mazad</a></h3>
+      <div class="media-block">
+        <video class="project-video" controls preload="none" playsinline poster="media/mazad-thumb.jpg">
+          <source src="media/mazad.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p>Auction marketplace for Lebanon. Live lots across goods, cars and property, with real-time bidding, countdown timers, and full Arabic and English support. Browsable without an account.</p>
+      <div class="chip-row">
+        <span class="chip">Next.js</span>
+        <span class="chip">Neon</span>
+        <span class="chip">Vercel</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <h3 class="project-title"><a href="https://zakr-landing.vercel.app" target="_blank" rel="noopener">Zakr</a></h3>
+      <div class="media-block">
+        <video class="project-video" controls preload="none" playsinline poster="media/zakr-thumb.jpg">
+          <source src="media/zakr.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p>Note-taking and memory assistant that runs entirely inside WhatsApp. Send it anything, ask for it back later. In active use.</p>
+      <div class="chip-row">
+        <span class="chip">WhatsApp API</span>
+        <span class="chip">Node</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <h3 class="project-title"><a href="https://capsul-one.vercel.app" target="_blank" rel="noopener">Nouri Capsul</a></h3>
+      <div class="media-block media-split has-stills">
+        <video class="project-video" controls preload="none" playsinline poster="media/capsul-thumb.jpg">
+          <source src="media/capsul.mp4" type="video/mp4">
+        </video>
+        <div class="still-row">
+          <a class="still-btn" href="media/ads/nouri-brand-board.jpg" data-full="media/ads/nouri-brand-board.jpg" data-alt="Nouri Capsul pistachio brand board">
+            <img src="media/ads/nouri-brand-board.jpg" alt="Nouri Capsul pistachio brand board" width="1024" height="768" decoding="async">
+          </a>
+          <a class="still-btn" href="media/ads/nouri-campaign.jpg" data-full="media/ads/nouri-campaign.jpg" data-alt="Nouri Capsul campaign visual, Made in Lebanon">
+            <img src="media/ads/nouri-campaign.jpg" alt="Nouri Capsul campaign visual, Made in Lebanon" width="768" height="1024" decoding="async">
+          </a>
+          <a class="still-btn" href="media/ads/nouri-mockups.jpg" data-full="media/ads/nouri-mockups.jpg" data-alt="Nouri Capsul billboard and product mockups">
+            <img src="media/ads/nouri-mockups.jpg" alt="Nouri Capsul billboard and product mockups" width="1024" height="682" decoding="async">
+          </a>
+        </div>
+      </div>
+      <p>Brand identity and storefront design for a coffee capsule label. Product presentation, brand story and cart flow. (Demo storefront — checkout is not connected to payments.)</p>
+      <div class="chip-row">
+        <span class="chip">Brand identity</span>
+        <span class="chip">Storefront</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <h3 class="project-title"><a href="https://veyra-web-nine.vercel.app" target="_blank" rel="noopener">Veyra</a></h3>
+      <div class="media-block">
+        <video class="project-video portrait" controls preload="none" playsinline poster="media/veyra-thumb.jpg">
+          <source src="media/veyra.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p>Goal-based meditation app. Onboarding captures your objective, then generates a personalised session with script and voice. Built with Expo and React Native.</p>
+      <div class="chip-row">
+        <span class="chip">Expo</span>
+        <span class="chip">React Native</span>
+        <span class="chip">OpenAI</span>
+      </div>
+    </article>
+  </section>
+
+  <section class="section" aria-labelledby="other-builds">
+    <h2 class="section-title" id="other-builds">Other builds</h2>
+    <article class="project" style="border-top:none; padding-top:0;">
+      <h3 class="project-title"><a href="https://whatsapp-viewer-lilac.vercel.app" target="_blank" rel="noopener">WhatsApp Chat Viewer</a></h3>
+      <div class="media-block">
+        <video class="project-video" controls preload="none" playsinline poster="media/whatsapp-thumb.jpg">
+          <source src="media/whatsapp.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p>Privacy-first, client-side chat export viewer.</p>
+    </article>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:mkiwann@outlook.com">Email</a>
+      <a href="https://github.com/Modie0" target="_blank" rel="noopener">GitHub</a>
+      <a href="cv.pdf" download="Mohamed-Kiwan-CV.pdf">CV</a>
+    </div>
+  </footer>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+  <img alt="">
+</div>
+
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+function openLightbox(src, alt){
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || '';
+  lightbox.classList.add('open');
+}
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  lightboxImg.removeAttribute('src');
+}
+document.addEventListener('click', (e)=>{
+  const btn = e.target.closest('.still-btn');
+  if(btn){
+    e.preventDefault();
+    openLightbox(btn.dataset.full, btn.dataset.alt);
+  }
+});
+lightbox.addEventListener('click', closeLightbox);
+document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>
